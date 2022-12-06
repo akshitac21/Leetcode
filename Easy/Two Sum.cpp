@@ -20,3 +20,26 @@ public:
         return sol;
     }    
 };
+
+//Other solution
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        map<int, int> m;
+        for(int i=0; i<nums.size(); i++)
+        {
+            int val = target - nums[i];
+
+            if(m.find(val) == m.end())
+            {
+                m[nums[i]] = i;
+            }
+            else
+            {
+                return {m[val], i};
+            }
+        }
+        return {0,0};
+    }  
+};
