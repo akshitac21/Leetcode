@@ -32,6 +32,10 @@ Step 6: Continue the loop with i = 2 and compare s with nums[i], which is also 2
 
 Step 7: s is equal to nums[i], so add nums[i] (which is 2) to ans, increment i by 1 to skip the next element, and update s to the next element in nums, which is 3.
 
+In step 7 of the execution, the variable i is incremented by 1 before the loop continues. 
+So after ans.push_back(nums[i]), i+=1, i is equal to 3. Therefore, in step 8, the loop continues with i = 4, 
+since the for loop increments i by 1 at the end of each iteration.
+
 Step 8: Continue the loop with i = 4 and compare s with nums[i], which is also 3.
 
 Step 9: s is equal to nums[i], so add nums[i] (which is 3) to ans, increment i by 1 to skip the next element, and update s to the next element in nums, which is 4.
