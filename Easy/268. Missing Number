@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int ans;
+        sort(nums.begin(),nums.end()); //0,1,2,3,4,5,6,7,9
+
+        if(nums[0]!=0) return 0; //check if first number is miss
+        if(nums[nums.size()-1] != nums.size()) return nums.size(); //check if last number miss
+
+        for(int i=1; i<nums.size(); i++){
+            if(nums[i]-nums[i-1] > 1){ //difference greater than one
+                ans=i;
+            }
+        }
+        return ans;
+        
+    }
+};
